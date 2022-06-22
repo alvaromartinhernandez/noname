@@ -6,12 +6,12 @@ export const ProductListItem = ({ product }) => {
   const productId = useMemo(() => product, [product]);
 
   return (
-    <>
+    <li>
       <Link to={`/product/${productId}`} key={productId} state={{id: productId}}>
         producto id {productId}
       </Link>
       <button>Add to cart x1</button>
-    </>
+    </li>
   );
 };
 
