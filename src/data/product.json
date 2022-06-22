@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Botellin",
+      "description": "La descripcion del producto 1",
+      "img": ["https://cdn.metro-group.com/es/es_pim_180739001001_01.png?w=400&h=400&mode=pad","https://sectorhostelero.com/443-home_default/cerveza-mahou-5-estrellas-nr-020cl-x-24-un.jpg"],
+      "price": 0.99
+    },
+    {
+      "id": 2,
+      "name": "Bocadillo lomo",
+      "description": "La descripcion del producto 2",
+      "img": ["https://babelcafeloungebar.com/wp-content/uploads/2021/02/bocadillo-lomo-queso-babel.jpg"],
+      "price": 3.25
+    }
+  ]
+  
