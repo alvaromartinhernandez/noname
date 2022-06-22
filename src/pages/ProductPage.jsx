@@ -10,30 +10,34 @@ export const ProductPage = () => {
   const product = useMemo(() => getProductById(id), [id]);
   console.log(product);
   return (
-    <div className="row rows-cols-1 row-cols-md-3 g-3">
+    <div className="product-page-container">
       {product.img != undefined && product.img.length > 1 && (
         <>
-        <span>Carrusel</span>
-         {product.img.map((imgproduct) => (
-            <img width="100%" src={imgproduct}></img>
-         ))}
-         </>
+          <span>Carrusel</span>
+          {product.img.map((imgproduct) => (
+            <img className="product-img" width="100%" src={imgproduct}></img>
+          ))}
+        </>
       )}
       {product.img != undefined && product.img.length == 1 && (
-        <img width="100%" src={product.img[0]}></img>
+        <img className="product-img" width="100%" src={product.img[0]}></img>
       )}
 
-      <h1>{product.name}</h1>
-      <p>
-        <strong>{product.price}</strong>
+      <h1 className="product-name center">{product.name}</h1>
+      <p className="product-price center">
+        {product.price} €
       </p>
-      <p>{product.description}</p>
-      <div>
+      <p className="product-description center">{product.description}</p>
+      <div className="center">
         <span> - </span>
         <input type="number"></input>
         <span> + </span>
       </div>
-      <button>ADD TO CART</button>
+      <div className="add-to-cart-container">
+        <button className="btn btn-primary w100 add-to-cart">
+          ADD TO CART
+        </button>
+      </div>
     </div>
   );
 };

@@ -29,7 +29,7 @@ export const CategoryPage = ({ categoryListProps = {} }: TestProps) => {
   const categoryListMemo = useMemo(() => categoryList, [categoryList]);
   
   return (
-    <div className="row rows-cols-1 row-cols-md-3 g-3">
+    <div>
       {category && (
         <h1>{category.name}</h1>
       )}
