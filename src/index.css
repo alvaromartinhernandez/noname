@@ -25,11 +25,13 @@ code {
   --color-02: #1a242d;
   --color-03: #ffffff;
 
+  --border-radius-00: 4px;
   --border-radius-01: 8px;
   --border-radius-02: 16px;
   --border-radius-03: 24px;
   --border-radius-04: 32px;
 
+  --spacing-00: 4px;
   --spacing-01: 8px;
   --spacing-02: 16px;
   --spacing-03: 24px;
@@ -47,6 +49,22 @@ code {
 }
 .center {
   text-align: center;
+}
+.fr{
+  float:right;
+}
+.fl{
+  float:left;
+}
+.btn-small {
+  border: none;
+  border-radius: var(--border-radius-00);
+  padding: var(--spacing-00) var(--spacing-01);
+  font-size: var(--font-size-02);
+  font-family: var(--font-primary);
+  text-shadow: none;
+  font-weight: 600;
+  letter-spacing: 0.7px;
 }
 
 .btn {
@@ -69,16 +87,48 @@ code {
   color: var(--color-03);
 }
 
+.app-header {
+  background: url("https://www.gentleman.excelsior.com.mx/wp-content/uploads/2019/03/G-BARRAS-01-1-1080x675.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  width: 100%;
+  z-index: 1;
+}
+.app-content {
+  z-index: 2;
+}
+
 .add-to-cart-container {
   position: fixed;
   background-color: white;
   padding: var(--spacing-01) 0;
   bottom: 0px;
   width: calc(100% - var(--spacing-02) - var(--spacing-02));
+  z-index: 2;
 }
 
-.product-page-container{
+.bar-info h1 {
+  font-size: var(--font-size-05);
+  font-family: var(--font-primary);
+  color: var(--color-01);
+  text-shadow: none;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+.category-description {
+  font-size: var(--font-size-01);
+  font-family: var(--font-primary);
+  color: var(--color-02);
+  text-shadow: none;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0px;
+}
+
+.product-page-container {
   padding: var(--spacing-02);
+  padding-bottom: calc(48px + var(--spacing-02) + var(--spacing-02));
 }
 .product-page-container .product-name {
   font-size: var(--font-size-05);
@@ -105,4 +155,74 @@ code {
   text-shadow: none;
   font-weight: 400;
   letter-spacing: 0.5px;
+}
+
+.category-list-item {
+  padding: var(--spacing-01) var(--spacing-02);
+  border-top: 1px solid var(--color-02);
+}
+.category-list-item:last-of-type {
+  border-bottom: 1px solid var(--color-02);
+}
+.category-list-item a {
+  font-size: var(--font-size-02);
+  font-family: var(--font-primary);
+  color: var(--color-01);
+  text-shadow: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.category-list-container .description-title {
+  font-size: var(--font-size-05);
+  font-family: var(--font-primary);
+  color: var(--color-01);
+  text-shadow: none;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+
+.product-list-container .product-list-title {
+  font-size: var(--font-size-04);
+  font-family: var(--font-primary);
+  color: var(--color-01);
+  text-shadow: none;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+  padding: 0 var(--spacing-02);
+}
+
+.product-list-container .product-list-item-link {
+  font-size: var(--font-size-02);
+  font-family: var(--font-primary);
+  color: var(--color-01);
+  text-shadow: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+.product-list-container .product-list-item-price {
+  font-size: var(--font-size-01);
+  font-family: var(--font-primary);
+  color: var(--color-02);
+  text-shadow: none;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0px;
+}
+
+.product-list-container .product-list-item {
+  position: relative;
+  padding: var(--spacing-01) var(--spacing-02);
+  border-top: 1px solid var(--color-02);
+}
+.product-list-container .product-list-item:last-of-type {
+  border-bottom: 1px solid var(--color-02);
+}
+.product-list-container .product-list-add-to-cart{
+  position: absolute;
+  top: calc(50% - 12px);
+  right: var(--spacing-02);
 }

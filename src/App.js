@@ -9,14 +9,14 @@ function App() {
   console.log("init!");
   return (
     <>
-      <header>HEADER</header>
+      <header className="app-header"></header>
+      <div className="app-content">
+      <div className="bar-info center"><h1>Bar Tolo</h1></div>
       <hr />
       <div>Featured products</div>
-        <hr/>
-        <CategoryPage categoryListProps={category} />
-  
-      <hr />
+      <CategoryPage categoryListProps={category} />
       <footer>footer</footer>
+      </div>
     </>
   );
 }

@@ -7,14 +7,14 @@ export const ProductList = ({productList}) => {
   const productListMemo = useMemo(() => productList, [productList]);
 
   return (
-    <div className="productListContainer">
-      <h2>Productos:</h2>
+    <div className="product-list-container">
+      <h2 className="product-list-title">Productos:</h2>
       {productListMemo != undefined && productListMemo.length > 0 && (
-        <ul>
+        <div className="product-list-content">
           {productListMemo.map((product) => (
             <ProductListItem product={product} />
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
